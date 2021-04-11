@@ -1,0 +1,22 @@
+{
+  "name": "wbdv-sp21-02-sambecker-server-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbecker195/wbdv-sp21-02-sambecker-server-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sbecker195/wbdv-sp21-02-sambecker-server-node/issues"
+  },
+  "homepage": "https://github.com/sbecker195/wbdv-sp21-02-sambecker-server-node#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
