@@ -6,11 +6,11 @@ app.get('/', (req, res) => {
     res.send('Hello')
 })
 
-// const mongo_url = 'mongodb+srv://' + process.env.MONGO_USER + ':' + process.env.MONGO_PW + '@cluster0.fleiw.mongodb.net/whiteboard?retryWrites=true&w=majority'
-const local_url = 'mongodb://localhost:27017/whiteboard-03'
+const mongo_url = 'mongodb+srv://' + process.env.MONGO_USER + ':' + process.env.MONGO_PW + '@cluster0.fleiw.mongodb.net/whiteboard?retryWrites=true&w=majority'
+// const local_url = 'mongodb://localhost:27017/whiteboard-03'
 
 const mongoose = require('mongoose');
-mongoose.connect(local_url,
+mongoose.connect(mongo_url,
   {useNewUrlParser: true, useUnifiedTopology: true});
 
 const bodyParser = require('body-parser')
