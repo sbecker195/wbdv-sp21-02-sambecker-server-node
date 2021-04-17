@@ -6,11 +6,11 @@ app.get('/', (req, res) => {
     res.send('Hello')
 })
 
-const mongo_url = 'mongodb+srv://' + process.env.MONGO_USER + ':' + process.env.MONGO_PW + '@cluster0.fleiw.mongodb.net/whiteboard?retryWrites=true&w=majority'
-// const local_url = 'mongodb://localhost:27017/whiteboard-02'
+// const mongo_url = 'mongodb+srv://' + process.env.MONGO_USER + ':' + process.env.MONGO_PW + '@cluster0.fleiw.mongodb.net/whiteboard?retryWrites=true&w=majority'
+const local_url = 'mongodb://localhost:27017/whiteboard-03'
 
 const mongoose = require('mongoose');
-mongoose.connect(mongo_url,
+mongoose.connect(local_url,
   {useNewUrlParser: true, useUnifiedTopology: true});
 
 const bodyParser = require('body-parser')
@@ -31,4 +31,4 @@ require('./controllers/quizzes-controller')(app)
 require('./controllers/question-controller')(app)
 require('./controllers/quiz-attempts-controller')(app);
 
-app.listen(process.env.PORT || 3001)
+app.listen(process.env.PORT || 4000)
